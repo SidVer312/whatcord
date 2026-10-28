@@ -60,6 +60,6 @@ async def on_message(message):
 #client.add_listener(send_messages)
 
 
-client.run("MTIwMjk3MTE2Mjc0NjAyODA1Mg.Gbrwfr.zHn2CUWgYNzp8tb9NSUWamJvlRl-gGcy5v0gXg")
+client.run("")
 
 
