@@ -8,8 +8,8 @@ intents.messages = True
 client = discord.Client(intents=intents)
 
 
-twilio_account_sid = 'AC8cc0e6a1a7519a483c9c4192e01df856'
-twilio_auth_token = '73ddd93aa276f0d2fac072a982bd4c29'
+twilio_account_sid = ''
+twilio_auth_token = ''
 twilio_client = Client(twilio_account_sid, twilio_auth_token)
 
 
@@ -36,7 +36,7 @@ async def on_message(message):
             to='whatsapp:+919990724207')
 
         t.sleep(5)
-        messages = twilio_client.messages.list(to="whatsapp:+14155238886", from_="whatsapp:+919990724207")
+        messages = twilio_client.messages.list(to="whatsapp:+1", from_="whatsapp:+91")
         if messages[0].sid not in message_processed:
             message_processed.append(messages[0].sid)
             await message.channel.send(messages[0].body)
@@ -44,7 +44,7 @@ async def on_message(message):
 
     
 #async def send_messages():
-#    messages = twilio_client.messages.list(to"whatsapp:+14155238886", from_="whatsapp:+919990724207")
+#    messages = twilio_client.messages.list(to"whatsapp:+1", from_="whatsapp:+91")
 #    S = messages[0].body
 #    L = S.split()
 #    if L[0] == "Bot" and L[1] == "send" and messages[0].sid not in message_processed:
